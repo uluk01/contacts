@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: aliceblue; }
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+@media screen and (min-width: 1250px) {
+  .container {
+    max-width: 1250px; } }
+@media screen and (min-width: 992px) and (max-width: 1250px) {
+  .container {
+    max-width: 960px; }
+
+  .main-nav__item {
+    grid-template-columns: repeat(auto-fit, minmax(50px, auto)); } }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    max-width: 720px; } }
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .container {
+    max-width: 540px; } }
+@media screen and (max-width: 992px) {
+  .add-new {
+    position: fixed;
+    bottom: 4px;
+    right: 0; }
+
+  .title-nav {
+    display: none !important; }
+
+  .main-nav__item {
+    display: block !important; }
+    .main-nav__item h5 {
+      margin-bottom: 10px; }
+    .main-nav__item a {
+      margin-bottom: 10px; }
+    .main-nav__item h4 {
+      margin-bottom: 10px; }
+
+  .functional__row {
+    flex-wrap: wrap;
+    justify-content: space-evenly !important; }
+
+  .select-form {
+    margin-bottom: 10px; }
+
+  .search-form {
+    margin: 0 !important; }
+
+  .search-form.active {
+    width: 80%; }
+
+  .search-form__input {
+    height: 30px; }
+
+  .search-form.active .search-form__button {
+    height: 30px;
+    width: 40px; } }
+.header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 10px black; }
+  .header__owner_img {
+    width: 64px;
+    height: 64px;
+    background: url("https://s3-ap-southeast-2.amazonaws.com/ehq-production-australia/307e5db88017e1485be238a3c00c760a0596cb59/team_members/images/000/001/701/original/male3-512.png?1461732668") no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 14px rgba(35, 36, 36, 0.31); }
+
+.functional {
+  padding: 30px; }
+  .functional__row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+
+.add-new {
+  background: dodgerblue;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  margin: 0 40px; }
+  .add-new i {
+    color: white;
+    font-size: 18px;
+    transform: translateY(-50%); }
+
+.title-nav {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 8% repeat(6, 1fr);
+  align-items: center;
+  border: 1px solid #1212112e;
+  background: white; }
+  .title-nav__item {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    padding: 11px 0; }
+
+.main-nav {
+  border: 1px solid #1212112e; }
+  .main-nav__item {
+    padding: 20px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 8% repeat(6, 1fr);
+    align-items: center;
+    background: white;
+    border: 1px solid #1212112e;
+    text-align: center;
+    margin: 5px; }
+  .main-nav__img {
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    background-position: center center; }
+
+.load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px; }
+  .load hr {
+    border: 0;
+    margin: 0;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    border-radius: 50%;
+    animation: spin 2s ease infinite; }
+    .load hr:first-child {
+      background: #19a68c;
+      animation-delay: -1.5s; }
+    .load hr:nth-child(2) {
+      background: #f63d3a;
+      animation-delay: -1s; }
+    .load hr:nth-child(3) {
+      background: #fda543;
+      animation-delay: -0.5s; }
+    .load hr:last-child {
+      background: #193b48; }
+
+@keyframes spin {
+  0%,
+    100% {
+    transform: translate(0); }
+  25% {
+    transform: translate(160%); }
+  50% {
+    transform: translate(160%, 160%); }
+  75% {
+    transform: translate(0, 160%); } }
+#app {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: none; }

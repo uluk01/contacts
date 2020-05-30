@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="select-form/__selected/__selected.css">
+    <link rel="stylesheet" href="search-form/search-form.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="load">
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+</div>
+<div id="app">
+    <header id="header" class="header">
+        <div class="header__logo">
+            <h1 class="header__title">My contacts</h1>
+        </div>
+        <div class="header__owner">
+            <div class="header__owner_img">
+
+            </div>
+        </div>
+    </header>
+    <section class="functional">
+        <div class="container">
+            <div class="functional__row">
+                <form class="select-form" style="width: 200px">
+                    <label for="choose"></label>
+                    <select name="choose" id="choose" class="select-form__choose">
+                        <option value="All">All</option>
+                        <option value="Family">Family</option>
+                        <option value="Friends">Friends</option>
+                        <option value="Colleague">Colleague</option>
+                    </select>
+                </form>
+                <form class="search-form">
+
+                    <label>
+                        <input class="search-form__input" type="text" placeholder="Search"/>
+                    </label>
+                    <div class="search-form__wrapper"></div>
+                    <div class="search-form__button">
+                        <a href="#"><i class="icon-search"></i></a>
+
+                    </div>
+
+
+                </form>
+
+                <div class="add-new">
+                    <a href="#" class="add-new__button ">
+                        <i class="icon-plus-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <sections class="main">
+        <div class="container">
+            <ul class="title-nav">
+                <li class="title-nav__item">ID</li>
+                <li class="title-nav__item">Image</li>
+                <li class="title-nav__item">Name</li>
+                <li class="title-nav__item">Phone</li>
+                <li class="title-nav__item">Email</li>
+                <li class="title-nav__item">Address</li>
+                <li class="title-nav__item">Status</li>
+            </ul>
+
+            <ul class="main-nav">
+            </ul>
+        </div>
+    </sections>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="select-form/__selected/__selected.js"></script>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

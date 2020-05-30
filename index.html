@@ -37,7 +37,7 @@
                     <select name="choose" id="choose" class="select-form__choose">
                         <option value="All">All</option>
                         <option value="Family">Family</option>
-                        <option value="Friends">Friends</option>
+                        <option value="Friend">Friends</option>
                         <option value="Colleague">Colleague</option>
                     </select>
                 </form>
@@ -81,6 +81,68 @@
         </div>
     </sections>
 </div>
+<form id="container">
+
+    <button type="button" id="button">X</button>
+    <div id="progress-triangle"></div>
+
+    <label for="name">
+        <div class="holder">
+            Name
+            <input type="text" name="name" autocomplete="off" id="name">
+        </div>
+    </label>
+
+    <label for="email">
+        <div class="holder">
+            Email
+            <input type="email" name="email" autocomplete="off" id="email">
+        </div>
+    </label>
+
+    <label for="tel">
+        <div class="holder">
+            Phone
+            <input type="tel" name="tel" id="tel">
+        </div>
+    </label>
+
+    <label for="address">
+        <div class="holder">
+            Address
+            <input type="text" name="address" id="address">
+        </div>
+    </label>
+
+    <label for="select">
+        <div class="holder">
+            Status
+            <select id="select">
+                <option>
+                    Family
+                </option>
+                <option>
+                    Friend
+                </option>
+                <option>
+                    Colleague
+                </option>
+            </select>
+
+            <div class="select-cover"></div>
+            <div id="select-triangle"></div>
+        </div>
+    </label>
+
+    <label for="submit-input">
+        <div class="holder" id="submit">
+            Add contact
+        </div>
+    </label>
+
+    <input type="submit" id="submit-input">
+</form>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="select-form/__selected/__selected.js"></script>
 <script src="js/data.js"></script>

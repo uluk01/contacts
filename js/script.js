@@ -24,33 +24,25 @@ $(document).ready(function () {
     });
 
     $.get("https://5e9fe4c311b078001679cfaf.mockapi.io/contacts", function (data, status) {
-        options.on('click', function () {
-            var visibleItems = filter(data, $(this).text());
-
-            function filter(items, filter) {
-                switch (filter) {
-                    case 'All':
-                        return items;
-                    case 'Family':
-                        return items.filter((item) => item.status === 'family');
-                    case 'Friends':
-                        return items.filter((item) => item.status === '"friend"');
-                    case 'Colleague':
-                        return items.filter((item) => item.status === 'colleague');
-                    default:
-                        return items;
-
-                }
-            }
-
-        });
         $(".search-form__input").on("keyup touchend", function () {
             var value = $(this).val().toLowerCase();
             $(".main-nav__item ").filter(function () {
-                $(this).toggle($(this).children('h4').text().toLowerCase().indexOf(value) > -1)
+                $(this).toggle($(this).children('h4').text().toLowerCase().indexOf(value) > -1);
                 console.log($(this).children('h4'))
             })
         });
+
+        $('.select-form__items div').on('click', function () {
+            var value = $(this).text().toLowerCase();
+            $(".main-nav__item ").filter(function () {
+                if (value === 'all') {
+                    $(this).toggle($('.main-nav__item div').text() !== null)
+                } else {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                }
+            });
+        });
+
 
         data.map(function (data) {
             var item = $('<li/>', {
@@ -91,3 +83,52 @@ $(document).ready(function () {
     });
 
 });
+
+$(document).ready(function () {
+    $('#name').focus();
+
+    var progressTriangle = $('#progress-triangle');
+
+    $('#name').focus(function () {
+        progressTriangle.animate({
+            top: "48px"
+        });
+    });
+    $('#email').focus(function () {
+        progressTriangle.animate({
+            top: "118px"
+        });
+    });
+    $('#password').focus(function () {
+        progressTriangle.animate({
+            top: "190px"
+        });
+    });
+    $('#select').focus(function () {
+        progressTriangle.animate({
+            top: "262px"
+        });
+    });
+
+
+    $('.add-new').on("click", function () {
+        $('body').addClass('add');
+
+    });
+
+    $('#submit').on('click', function (e) {
+        var num = 100;
+        $.post('https://5e9fe4c311b078001679cfaf.mockapi.io/contacts', {
+            id: num++,
+            name: $('#name').val(),
+            address: $('#address').val(),
+            email: $('#email').val(),
+            status: $('#select').val()
+        });
+
+    });
+
+    $("#button").on("click", function () {
+        $('body').removeClass('add');
+    })
+})

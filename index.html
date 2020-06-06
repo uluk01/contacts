@@ -7,16 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contacts</title>
     <link rel="stylesheet" href="css/fontello.css">
-    <link rel="stylesheet" href="select-form/__selected.css">
-    <link rel="stylesheet" href="search-form/search-form.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="load">
-    <hr />
-    <hr />
-    <hr />
-    <hr />
+    <hr/>
+    <hr/>
+    <hr/>
+    <hr/>
 </div>
 <div id="app">
     <header id="header" class="header">
@@ -66,21 +64,23 @@
 
     <sections class="main">
         <div class="container">
-            <ul class="title-nav">
-                <li class="title-nav__item">ID</li>
-                <li class="title-nav__item">Image</li>
-                <li class="title-nav__item">Name</li>
-                <li class="title-nav__item">Phone</li>
-                <li class="title-nav__item">Email</li>
-                <li class="title-nav__item">Address</li>
-                <li class="title-nav__item">Status</li>
-            </ul>
+            <table class="main-nav">
+                <tr class="title-nav">
+                    <td class="title-nav__item">ID</td>
+                    <td class="title-nav__item">Image</td>
+                    <td class="title-nav__item">Name</td>
+                    <td class="title-nav__item">Phone</td>
+                    <td class="title-nav__item">Email</td>
+                    <td class="title-nav__item">Address</td>
+                    <td class="title-nav__item">Status</td>
+                </tr>
+            </table>
 
-            <ul class="main-nav">
-            </ul>
+
         </div>
     </sections>
 </div>
+<button type="button" class="exit" style="display: none"><---</button>
 <form id="container">
 
     <button type="button" id="button">X</button>
@@ -135,16 +135,14 @@
     </label>
 
     <label for="submit-input">
-        <div class="holder" id="submit">
-            Add contact
-        </div>
+
     </label>
 
     <input type="submit" id="submit-input">
 </form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="select-form/__selected.js"></script>
+<script src="select-form/__selected/__selected.js"></script>
 <script src="js/data.js"></script>
 <script src="js/script.js"></script>
 </body>

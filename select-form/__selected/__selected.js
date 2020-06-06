@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function __selected() {
     var select = $(".select-form__choose");
     var form = $('.select-form');
     var option = $(".select-form__choose option");

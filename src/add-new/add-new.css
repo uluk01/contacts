@@ -1,0 +1,21 @@
+.add-new {
+  background: dodgerblue;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  margin: 0 40px; }
+  .add-new i {
+    color: white;
+    font-size: 18px;
+    transform: translateY(-50%); }
+
+.add #container {
+  display: block; }
+.add #shimai-world {
+  background: #000000bd !important;
+  z-index: 0 !important; }

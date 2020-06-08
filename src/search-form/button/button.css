@@ -1,0 +1,17 @@
+.search-form__button {
+  background: dodgerblue;
+  border-radius: 50%;
+  transform-origin: 100% 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: 250ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .search-form__button i {
+    color: white;
+    font-size: 18px;
+    transform: translateY(-50%); }
+.search-form.active .search-form__button {
+  border-radius: 0 20px 20px 0; }

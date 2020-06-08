@@ -1,0 +1,35 @@
+.main-nav {
+  border: 1px solid #1212112e;
+  width: 100%;
+  position: relative; }
+  .main-nav__item {
+    padding: 20px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 8% repeat(6, 1fr) 2% 2%;
+    grid-column-gap: 3px;
+    align-items: center;
+    background: white;
+    border: 1px solid #1212112e;
+    text-align: center;
+    margin: 5px; }
+    .main-nav__item button {
+      border: none;
+      padding: 4px;
+      color: white;
+      font-weight: 700;
+      cursor: pointer; }
+      .main-nav__item button:focus {
+        outline: none; }
+  .main-nav__img {
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    background-position: center center; }
+  .main-nav__delete {
+    background: red; }
+  .main-nav__edit {
+    background: green; }

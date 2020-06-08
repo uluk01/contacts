@@ -1,0 +1,48 @@
+.main-nav {
+  border: 1px solid #1212112e;
+  width: 100%;
+  position: relative;
+
+  &__item {
+    padding: 20px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 8% repeat(6, 1fr) 2% 2%;
+    grid-column-gap: 3px;
+    align-items: center;
+    background: white;
+    border: 1px solid #1212112e;
+    text-align: center;
+    margin: 5px;
+
+    button {
+      border: none;
+      padding: 4px;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__img {
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    background-position: center center;
+  }
+
+  &__delete {
+    background: red;
+  }
+
+  &__edit {
+    background: green;
+  }
+}

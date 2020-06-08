@@ -1,18 +1,3 @@
-$(window).on('load', function () {
-    var myVar;
-    myVar = setTimeout(showPage, 3000);
-
-
-    function showPage() {
-        $(".load").css({'display': 'none'});
-        $("#app").css({
-            'display': 'block'
-        })
-
-    }
-
-
-});
 $(document).ready(function () {
     var mainNav = $(".main-nav");
     $.get("https://my-json-server.typicode.com/ka245/fake-json/users", function (data, status) {
@@ -65,7 +50,7 @@ $(document).ready(function () {
         });
         $(".main-nav__delete").on("click", onDelete);
         $(".main-nav__edit").on("click", onEdit);
-        $(".main-nav__item").on("click", onView)
+        $(".main-nav__item").on("click", onView);
 
         $(".exit").on("click", function () {
             $('html').removeClass('show-contacts');
@@ -140,108 +125,4 @@ $(document).ready(function () {
 
         });
     });
-});
-
-
-$(document).ready(function () {
-
-
-    $('#name').focus();
-
-    var progressTriangle = $('#progress-triangle');
-
-    $('#name').focus(function () {
-        progressTriangle.animate({
-            top: "48px"
-        });
-    });
-    $('#email').focus(function () {
-        progressTriangle.animate({
-            top: "118px"
-        });
-    });
-    $('#password').focus(function () {
-        progressTriangle.animate({
-            top: "190px"
-        });
-    });
-    $('#select').focus(function () {
-        progressTriangle.animate({
-            top: "262px"
-        });
-    });
-
-    var searchForm = $('.search-form');
-    var searchButton = $('.search-form__button');
-
-    searchButton.on("click", function () {
-        searchForm.toggleClass('active');
-    });
-
-    $(".search-form__input").on("keyup touchend", function () {
-        var value = $(this).val().toLowerCase();
-        $(".main-nav__item ").filter(function () {
-            $(this).toggle($(this).children('.search').text().toLowerCase().indexOf(value) > -1);
-        });
-    });
-
-    $('.select-form__items div').on('click', function () {
-        var value = $(this).text().toLowerCase();
-        $(".main-nav__item ").filter(function () {
-            if (value === 'all') {
-                $(this).toggle($('.main-nav__item div').text() !== null)
-                $('html').removeClass('show-contacts');
-                $(this).removeClass('selected-contact');
-            } else {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                $('html').removeClass('show-contacts');
-                $(this).removeClass('selected-contact');
-            }
-        });
-    });
-
-
-    $('.add-new').on("click", function () {
-        $('<div/>', {
-            class: 'holder',
-            text: 'Add contact',
-            id: 'submit'
-        }).appendTo($('#container label[for="submit-input"]'));
-
-        $('body').addClass('add');
-
-
-    });
-
-    $('#submit').on('click', function (e) {
-        var num = 100;
-        $.post('https://5e9fe4c311b078001679cfaf.mockapi.io/contacts', {
-            id: num++,
-            name: $('#name').val(),
-            address: $('#address').val(),
-            email: $('#email').val(),
-            status: $('#select').val()
-        });
-    });
-
-    $("#button").on("click", function () {
-        $('body').removeClass('add');
-        $("#edit").remove();
-        $("#submit").remove()
-    });
-
-
-    $('#edit').on('click', function () {
-        $.post('https://5e9fe4c311b078001679cfaf.mockapi.io/contacts', {
-            id: num++,
-            name: $('#name').val(),
-            address: $('#address').val(),
-            email: $('#email').val(),
-            status: $('#select').val()
-        });
-        location.reload();
-
-    });
-
-
 });

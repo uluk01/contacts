@@ -1,0 +1,17 @@
+.header {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+
+  &__owner_img {
+    width: 64px;
+    height: 64px;
+    background: url("https://s3-ap-southeast-2.amazonaws.com/ehq-production-australia/307e5db88017e1485be238a3c00c760a0596cb59/team_members/images/000/001/701/original/male3-512.png?1461732668") no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 14px rgba(35, 36, 36, 0.31);
+  }
+}

@@ -53,4 +53,20 @@ $(document).ready(function __selected() {
     }
 
     $(document).on("click", closeAllSelect);
+
+    $('.select-form__items div').on('click', function () {
+        var value = $(this).text().toLowerCase();
+        $(".main-nav__item ").filter(function () {
+            if (value === 'all') {
+                $(this).toggle($('.main-nav__item div').text() !== null);
+                $('html').removeClass('show-contacts');
+                $(this).removeClass('selected-contact');
+            } else {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                $('html').removeClass('show-contacts');
+                $(this).removeClass('selected-contact');
+            }
+        });
+    });
+
 });

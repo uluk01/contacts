@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: aliceblue; }
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+@media screen and (min-width: 1250px) {
+  .container {
+    max-width: 1250px; } }
+@media screen and (min-width: 992px) and (max-width: 1250px) {
+  .container {
+    max-width: 960px; }
+
+  .main-nav__item {
+    grid-template-columns: repeat(auto-fit, minmax(50px, auto)); } }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    max-width: 720px; } }
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .container {
+    max-width: 540px; } }
+@media screen and (max-width: 992px) {
+  .show-contacts .main-nav__item:not(.selected-contact) {
+    pointer-events: none;
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    display: none; }
+
+  .show-contacts .main-nav__item td {
+    display: block !important;
+    margin: 10px 0; }
+
+  .show-contacts .main-nav__item button {
+    display: block;
+    margin: 10px 0;
+    width: 100%; }
+
+  .show-contacts .exit {
+    display: block !important;
+    padding: 20px;
+    color: coral;
+    width: 100%;
+    border: 0;
+    background: white;
+    box-shadow: 0 0 4px 0 #6e5656d9; }
+
+  .contact-info-item {
+    border-bottom: 1px solid #f5f5f5;
+    display: block; }
+
+  .show-contacts .selected-contact {
+    position: absolute;
+    width: 97%;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block !important; }
+
+  .add-new {
+    position: fixed;
+    bottom: 4px;
+    right: 0;
+    z-index: 99; }
+
+  .title-nav {
+    display: none !important; }
+
+  .main-nav__item {
+    grid-template-columns: 1fr 2fr !important; }
+  .main-nav td:not(.main-nav__name) {
+    display: none; }
+  .main-nav__delete {
+    display: none; }
+  .main-nav__edit {
+    display: none; }
+
+  .functional__row {
+    flex-wrap: wrap;
+    justify-content: space-evenly !important; }
+
+  .select-form {
+    margin-bottom: 10px; }
+
+  .search-form {
+    margin: 0 !important; }
+
+  .search-form.active {
+    width: 80%; }
+
+  .search-form__input {
+    height: 30px; }
+
+  .search-form.active .search-form__button {
+    height: 30px;
+    width: 40px; } }
+.functional {
+  padding: 30px; }
+  .functional__row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }

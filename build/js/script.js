@@ -70,7 +70,39 @@ $(document).ready(function () {
         $(".exit").on("click", function () {
             $('html').removeClass('show-contacts');
             $(this).removeClass('selected-contact');
-        })
+        });
+
+        $.get("https://tinyfac.es/api/users", function (data, status) {
+            $.each(data, function (i, avatar) {
+                $('.main-nav__img').eq(i).css('background-image', 'url("' + avatar.avatars[0].url + '")')
+            });
+
+        });
+
+        $.get("https://my-json-server.typicode.com/ka245/fake-json/status", function (data, i) {
+            $.each(data, function (i, status) {
+                for (var j = 0; j < 10; j++) {
+                    if ($('.main-nav__id').eq(i).text() == data[j].userId) {
+                        $('.main-nav__status').eq(i).text(status.status)
+                    }
+                }
+            });
+
+        });
+
+        $.get("https://my-json-server.typicode.com/ka245/fake-json/address", function (data, status) {
+            $.each(data, function (i, address) {
+                for (var j = 0; j < 10; j++) {
+                    if ($('.main-nav__id').eq(i).text() == data[j].userId) {
+                        $('.main-nav__tel').eq(i).text(address.phone);
+                        $('.main-nav__address').eq(i).text(address.address.city)
+                    }
+                    console.log(data)
+                }
+
+            });
+        });
+
 
     });
 
@@ -105,42 +137,9 @@ $(document).ready(function () {
 
     }
 
+
 });
 
-$(document).ready(function () {
-    $.get("https://tinyfac.es/api/users", function (data, status) {
-        $.each(data, function (i, avatar) {
-            $('.main-nav__img').eq(i).css('background-image', 'url("' + avatar.avatars[0].url + '")')
-        });
-    });
-});
-
-$(document).ready(function () {
-    $.get("https://my-json-server.typicode.com/ka245/fake-json/status", function (data, i) {
-        $.each(data, function (i, status) {
-            for (var j = 0; j < 10; j++) {
-                if ($('.main-nav__id').eq(i).text() == data[j].userId) {
-                    $('.main-nav__status').eq(i).text(status.status)
-                }
-            }
-        });
-    });
-});
-
-$(document).ready(function () {
-    $.get("https://my-json-server.typicode.com/ka245/fake-json/address", function (data, status) {
-        $.each(data, function (i, address) {
-            for (var j = 0; j < 10; j++) {
-                if ($('.main-nav__id').eq(i).text() == data[j].userId) {
-                    $('.main-nav__tel').eq(i).text(address.phone);
-                    $('.main-nav__address').eq(i).text(address.address.city)
-                }
-
-            }
-
-        });
-    });
-});
 
 $(document).ready(function () {
     $('.add-new').on("click", function () {

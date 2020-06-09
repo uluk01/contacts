@@ -36,9 +36,16 @@ $(document).ready(function () {
     });
 
     $("#button").on("click", function () {
+
         $('body').removeClass('add');
+        $('.wrapper').remove();
         $("#edit").remove();
-        $("#submit").remove()
+        $("#submit").remove();
+        $('#name').val('');
+        $('#email').val('');
+        $('#tel').val('');
+        $('#address').val('');
+        $('#select').val('');
     });
 
 

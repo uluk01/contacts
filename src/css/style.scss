@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -51,7 +52,7 @@ body {
 
 @media screen and (max-width: 992px) {
   .selected-contact td {
-    display: block!important;
+    display: block !important;
     margin: 10px 0;
   }
   .selected-contact i {
@@ -59,7 +60,6 @@ body {
     margin: 10px 10px;
     width: 100%;
   }
-
 
 
   .contact-info-item {
@@ -153,9 +153,18 @@ body {
   }
 }
 
-.exit{
+.exit {
   display: none;
   position: absolute;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: #000000bd !important;
+  z-index: 0 !important;
 }
 
 

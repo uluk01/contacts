@@ -107,3 +107,11 @@ body {
 .exit {
   display: none;
   position: absolute; }
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: #000000bd !important;
+  z-index: 0 !important; }

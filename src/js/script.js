@@ -106,6 +106,10 @@ $(document).ready(function () {
         }).appendTo($('#container label[for="submit-input"]'));
 
         $('body').addClass('add');
+
+        $('<div/>', {
+            class: 'wrapper'
+        }).appendTo($('body'))
     }
 
     function onView() {

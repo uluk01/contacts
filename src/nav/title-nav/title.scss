@@ -1,14 +1,15 @@
 .title-nav {
   padding: 20px;
   display: grid;
-  grid-template-columns: 8% repeat(6, 1fr) 2%;;
+  grid-template-columns:4% repeat(6, 1fr) 3% 3%;
   align-items: center;
   border: 1px solid #1212112e;
-  background: white;
+  background: #979fa7;
 
   &__item {
     text-align: center;
     padding: 11px 0;
+    color: #fff;
   }
 }
 

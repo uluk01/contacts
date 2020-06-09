@@ -14,7 +14,7 @@ $(document).ready(function __selected() {
 
     $.each(option, function (key, item) {
         var options = $("<div/>", {
-            text: `${item.value}`
+            text: ''+ item.value +''
         }).appendTo(b);
 
         options.on("click", function () {

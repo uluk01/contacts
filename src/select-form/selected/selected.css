@@ -1,10 +1,10 @@
 .select-form {
-    position: relative; }
-.select-form select {
+  position: relative; }
+  .select-form select {
     display: none; }
-.select-form__selected {
-    background-color: dodgerblue; }
-.select-form__selected:after {
+  .select-form__selected {
+    background-color: #979fa7; }
+  .select-form__selected:after {
     position: absolute;
     content: "";
     top: 14px;
@@ -13,23 +13,23 @@
     height: 0;
     border: 6px solid transparent;
     border-color: #fff transparent transparent transparent; }
-.select-form__selected.select-form__arrow-active:after {
+  .select-form__selected.select-form__arrow-active:after {
     border-color: transparent transparent #fff transparent;
     top: 7px; }
-.select-form__items div, .select-form__selected {
-    color: #fff;
+  .select-form__items div, .select-form__selected {
+    color: #ffffff;
     padding: 8px 16px;
     border: 1px solid transparent;
     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     cursor: pointer; }
-.select-form__items {
+  .select-form__items {
     position: absolute;
-    background-color: dodgerblue;
+    background-color: #979fa7;
     top: 100%;
     left: 0;
     right: 0;
     z-index: 99; }
-.select-form__hide {
+  .select-form__hide {
     display: none; }
-.select-form__items div:hover, .select-form__same-as-selected {
+  .select-form__items div:hover, .select-form__same-as-selected {
     background-color: rgba(0, 0, 0, 0.1); }

@@ -37,25 +37,18 @@ $(document).ready(function () {
                 class: 'main-nav__status'
             }).appendTo(item);
 
-            $('<button/>', {
-                text: 'X',
-                class: 'main-nav__delete',
+            $('<i/>', {
+                class: 'main-nav__delete icon-trash',
             }).appendTo(item);
 
-            $('<button>', {
-                text: '!',
-                class: 'main-nav__edit'
+            $('<i>', {
+                class: 'main-nav__edit icon-pencil'
             }).appendTo(item);
 
         });
         $(".main-nav__delete").on("click", onDelete);
         $(".main-nav__edit").on("click", onEdit);
         $(".main-nav__item").on("click", onView);
-
-        $(".exit").on("click", function () {
-            $('html').removeClass('show-contacts');
-            $(this).removeClass('selected-contact');
-        });
 
         $.get("https://tinyfac.es/api/users", function (data, status) {
             $.each(data, function (i, avatar) {
@@ -82,7 +75,6 @@ $(document).ready(function () {
                         $('.main-nav__tel').eq(i).text(address.phone);
                         $('.main-nav__address').eq(i).text(address.address.city)
                     }
-                    console.log(data)
                 }
 
             });
@@ -117,8 +109,10 @@ $(document).ready(function () {
     }
 
     function onView() {
-        $('html').addClass('show-contacts');
-        $(this).addClass('selected-contact');
+        $(this).toggleClass('selected-contact');
+        $('.exit').css({
+            'display': 'block'
+        })
 
     }
 

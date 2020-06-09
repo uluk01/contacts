@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
+  background: #979fa7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 
   &__owner_img {
@@ -13,5 +13,10 @@
     background-size: cover;
     border-radius: 50%;
     box-shadow: 0 0 14px rgba(35, 36, 36, 0.31);
+  }
+  &__title {
+    font-size: 45px;
+    font-weight: 900;
+    color: #fff;
   }
 }
